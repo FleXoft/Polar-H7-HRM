@@ -1,0 +1,302 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF4E7F651EA764320015C0FB /* pics in Resources */ = {isa = PBXBuildFile; fileRef = FF4E7F641EA764320015C0FB /* pics */; };
+		FFC3BB3B1E899D8200CB6263 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC3BB3A1E899D8200CB6263 /* AppDelegate.swift */; };
+		FFC3BB3D1E899D8200CB6263 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC3BB3C1E899D8200CB6263 /* ViewController.swift */; };
+		FFC3BB3F1E899D8200CB6263 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC3BB3E1E899D8200CB6263 /* Assets.xcassets */; };
+		FFC3BB421E899D8200CB6263 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC3BB401E899D8200CB6263 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FF4E7F621EA7641C0015C0FB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		FF4E7F641EA764320015C0FB /* pics */ = {isa = PBXFileReference; lastKnownFileType = folder; path = pics; sourceTree = SOURCE_ROOT; };
+		FFC3BB371E899D8200CB6263 /* HRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFC3BB3A1E899D8200CB6263 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FFC3BB3C1E899D8200CB6263 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFC3BB3E1E899D8200CB6263 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FFC3BB411E899D8200CB6263 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FFC3BB431E899D8200CB6263 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FFC3BB341E899D8200CB6263 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FFC3BB2E1E899D8200CB6263 = {
+			isa = PBXGroup;
+			children = (
+				FFC3BB391E899D8200CB6263 /* HRM */,
+				FFC3BB381E899D8200CB6263 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FFC3BB381E899D8200CB6263 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFC3BB371E899D8200CB6263 /* HRM.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FFC3BB391E899D8200CB6263 /* HRM */ = {
+			isa = PBXGroup;
+			children = (
+				FFC3BB3A1E899D8200CB6263 /* AppDelegate.swift */,
+				FFC3BB3C1E899D8200CB6263 /* ViewController.swift */,
+				FFC3BB3E1E899D8200CB6263 /* Assets.xcassets */,
+				FFC3BB401E899D8200CB6263 /* Main.storyboard */,
+				FFC3BB431E899D8200CB6263 /* Info.plist */,
+				FF4E7F621EA7641C0015C0FB /* README.md */,
+				FF4E7F641EA764320015C0FB /* pics */,
+			);
+			path = HRM;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FFC3BB361E899D8200CB6263 /* HRM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FFC3BB461E899D8200CB6263 /* Build configuration list for PBXNativeTarget "HRM" */;
+			buildPhases = (
+				FFC3BB331E899D8200CB6263 /* Sources */,
+				FFC3BB341E899D8200CB6263 /* Frameworks */,
+				FFC3BB351E899D8200CB6263 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HRM;
+			productName = HRM;
+			productReference = FFC3BB371E899D8200CB6263 /* HRM.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FFC3BB2F1E899D8200CB6263 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "FLEISCHMANN György";
+				TargetAttributes = {
+					FFC3BB361E899D8200CB6263 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FFC3BB321E899D8200CB6263 /* Build configuration list for PBXProject "HRM" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FFC3BB2E1E899D8200CB6263;
+			productRefGroup = FFC3BB381E899D8200CB6263 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FFC3BB361E899D8200CB6263 /* HRM */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FFC3BB351E899D8200CB6263 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF4E7F651EA764320015C0FB /* pics in Resources */,
+				FFC3BB3F1E899D8200CB6263 /* Assets.xcassets in Resources */,
+				FFC3BB421E899D8200CB6263 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FFC3BB331E899D8200CB6263 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFC3BB3D1E899D8200CB6263 /* ViewController.swift in Sources */,
+				FFC3BB3B1E899D8200CB6263 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FFC3BB401E899D8200CB6263 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FFC3BB411E899D8200CB6263 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FFC3BB441E899D8200CB6263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FFC3BB451E899D8200CB6263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		FFC3BB471E899D8200CB6263 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HRM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FleXoft-Inc..HRM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FFC3BB481E899D8200CB6263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HRM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "FleXoft-Inc..HRM";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FFC3BB321E899D8200CB6263 /* Build configuration list for PBXProject "HRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC3BB441E899D8200CB6263 /* Debug */,
+				FFC3BB451E899D8200CB6263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FFC3BB461E899D8200CB6263 /* Build configuration list for PBXNativeTarget "HRM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FFC3BB471E899D8200CB6263 /* Debug */,
+				FFC3BB481E899D8200CB6263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FFC3BB2F1E899D8200CB6263 /* Project object */;
+}
