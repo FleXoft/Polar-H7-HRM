@@ -19,6 +19,8 @@ UUIDs: http://stackoverflow.com/questions/33892310/polar-h7-unresolved-service-a
 
 Help HR values calculation: http://stackoverflow.com/questions/25456359/how-to-get-data-out-of-bluetooth-characteristic-in-swift
 
+Zero to BLE on iOS (1, 2) https://www.cloudcity.io/blog/2015/06/11/zero-to-ble-on-ios-part-one/ https://www.cloudcity.io/blog/2016/09/09/zero-to-ble-on-ios--part-two---swift-edition/
+
 ## Features:
 
 - "continuous" RSSI 

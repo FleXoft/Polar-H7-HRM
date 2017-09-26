@@ -246,6 +246,38 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
                     print("       Characteristic UUID: \(characteristic.uuid.uuidString)")
                     print("       Characteristic isNotifying: \(characteristic.isNotifying)")
                     print("       Characteristic properties: \(characteristic.properties)")
+                    
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.broadcast.rawValue) > 0 {
+                        print("broadcast")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.read.rawValue) > 0 {
+                        print("read")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.writeWithoutResponse.rawValue) > 0 {
+                        print("write without response")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.write.rawValue) > 0 {
+                        print("write")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.notify.rawValue) > 0 {
+                        print("notify")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.indicate.rawValue) > 0 {
+                        print("indicate")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.authenticatedSignedWrites.rawValue) > 0 {
+                        print("authenticated signed writes ")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.extendedProperties.rawValue) > 0 {
+                        print("indicate")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.notifyEncryptionRequired.rawValue) > 0 {
+                        print("notify encryption required")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.indicateEncryptionRequired.rawValue) > 0 {
+                        print("indicate encryption required")
+                    }
+                    
                     print("       Characteristic descriptors: \(String(describing: characteristic.descriptors))")
                     print("       Characteristic value: \(String(describing: characteristic.value))")
                     print("       --------------------------------------------")
@@ -291,6 +323,38 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
                     print("       Characteristic UUID: \(characteristic.uuid.uuidString)")
                     print("       Characteristic isNotifying: \(characteristic.isNotifying)")
                     print("       Characteristic properties: \(characteristic.properties)")
+                    
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.broadcast.rawValue) > 0 {
+                        print("broadcast")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.read.rawValue) > 0 {
+                        print("read")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.writeWithoutResponse.rawValue) > 0 {
+                        print("write without response")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.write.rawValue) > 0 {
+                        print("write")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.notify.rawValue) > 0 {
+                        print("notify")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.indicate.rawValue) > 0 {
+                        print("indicate")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.authenticatedSignedWrites.rawValue) > 0 {
+                        print("authenticated signed writes ")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.extendedProperties.rawValue) > 0 {
+                        print("indicate")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.notifyEncryptionRequired.rawValue) > 0 {
+                        print("notify encryption required")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.indicateEncryptionRequired.rawValue) > 0 {
+                        print("indicate encryption required")
+                    }
+                    
                     print("       Characteristic descriptors: \(String(describing: characteristic.descriptors))")
                     print("       Characteristic value: \(String(describing: characteristic.value))")
                     print("       --------------------------------------------")
@@ -317,6 +381,38 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
                     print("       Characteristic UUID: \(characteristic.uuid.uuidString)")
                     print("       Characteristic isNotifying: \(characteristic.isNotifying)")
                     print("       Characteristic properties: \(characteristic.properties)")
+                    
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.broadcast.rawValue) > 0 {
+                        print("broadcast")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.read.rawValue) > 0 {
+                        print("read")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.writeWithoutResponse.rawValue) > 0 {
+                        print("write without response")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.write.rawValue) > 0 {
+                        print("write")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.notify.rawValue) > 0 {
+                        print("notify")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.indicate.rawValue) > 0 {
+                        print("indicate")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.authenticatedSignedWrites.rawValue) > 0 {
+                        print("authenticated signed writes ")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.extendedProperties.rawValue) > 0 {
+                        print("indicate")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.notifyEncryptionRequired.rawValue) > 0 {
+                        print("notify encryption required")
+                    }
+                    if (characteristic.properties.rawValue & CBCharacteristicProperties.indicateEncryptionRequired.rawValue) > 0 {
+                        print("indicate encryption required")
+                    }
+                    
                     print("       Characteristic descriptors: \(String(describing: characteristic.descriptors))")
                     print("       Characteristic value: \(String(describing: characteristic.value))")
                     print("       --------------------------------------------")
@@ -327,6 +423,8 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
         print("------ didDiscoverCharacteristicsFor end =====================================================")
     }
     
+    // ??
+    
     func peripheral(_ peripheral: CBPeripheral, peripheralDidUpdateRSSI error: NSError) {
         print("------- peripheralDidUpdateRSSI begin")
 
@@ -336,11 +434,38 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     }
 
     // in iOS and tvOS, use the peripheral:didReadRSSI:error: method instead.
-    func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber!, error: Error?) {
+    func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
         print("------- peripheralDidUpdateRSSI begin \(RSSI)")
         
         print("------- peripheralDidUpdateRSSI end")
     }
+    
+    // peripheral didUpdateNotificationStateFor
+    func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor
+        characteristic: CBCharacteristic, error: Error?) {
+        
+        if (error) != nil{
+            print("----- error in didUpdateNotificationStateFor: \(String(describing: error?.localizedDescription))")
+            print("----- error in didUpdateNotificationStateFor: \(String(describing: error))")
+        }
+        else {
+            
+            print("------- didUpdateNotificationStateFor begin \(characteristic.uuid.uuidString)")
+            
+            print("       --------------------------------------------")
+            print("       Characteristic UUID: \(characteristic.uuid)")
+            print("       Characteristic UUID: \(characteristic.uuid.uuidString)")
+            print("       Characteristic isNotifying: \(characteristic.isNotifying)")
+            print("       Characteristic properties: \(characteristic.properties)")
+            print("       Characteristic descriptors: \(String(describing: characteristic.descriptors))")
+            print("       Characteristic value: \(String(describing: characteristic.value))")
+            print("       --------------------------------------------")
+            
+            print("------- didUpdateNotificationStateFor end")
+        }
+    }
+    
+    // ??
     
     // peripheral didUpdateValueFor
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
