@@ -172,7 +172,7 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
         else {
             print("----- didDiscoverServices begin")
             
-            for service in peripheral.services as [CBService]! {
+            for service in (peripheral.services as [CBService]?)! {
                 print ("+++++ Service: \(String(describing: service.uuid))")
                 
                 peripheral.discoverCharacteristics(nil, for: service)
@@ -425,17 +425,20 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     // ??
     
-    func peripheral(_ peripheral: CBPeripheral, peripheralDidUpdateRSSI error: NSError) {
-        print("------- peripheralDidUpdateRSSI begin")
-
-        print("peripheralDidUpdateRSSI \(peripheral.name!) = \(peripheral.rssi ?? 0)")
-        
-        print("------- peripheralDidUpdateRSSI end")
-    }
-
+//    func peripheral(_ peripheral: CBPeripheral, peripheralDidUpdateRSSI error: NSError) {
+//        print("------- peripheralDidUpdateRSSI begin")
+//
+//       print("peripheralDidUpdateRSSI \(peripheral.name!) = \(peripheral.rssi ?? 0)")
+//
+//        print("------- peripheralDidUpdateRSSI end")
+//    }
+    
+    
     // in iOS and tvOS, use the peripheral:didReadRSSI:error: method instead.
     func peripheral(_ peripheral: CBPeripheral, didReadRSSI RSSI: NSNumber, error: Error?) {
         print("------- peripheralDidUpdateRSSI begin \(RSSI)")
+        
+        RSSITextField.stringValue = "RSSI: \(String(describing: RSSI)) db (-30 dB Amazing, -67 dB Very Good, -70 dB Okay, -80 dB Not Good, -90 dB Unusable)."
         
         print("------- peripheralDidUpdateRSSI end")
     }
@@ -473,7 +476,7 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     
         // RSSI
         peripheral.readRSSI()
-        RSSITextField.stringValue = "RSSI: \(String(describing: peripheral.rssi ?? 0)) db (-30 dB Amazing, -67 dB Very Good, -70 dB Okay, -80 dB Not Good, -90 dB Unusable)."
+        //RSSITextField.stringValue = "RSSI: \(String(describing: peripheral.rssi ?? 0)) db (-30 dB Amazing, -67 dB Very Good, -70 dB Okay, -80 dB Not Good, -90 dB Unusable)."
         
         if (error) != nil{
             
