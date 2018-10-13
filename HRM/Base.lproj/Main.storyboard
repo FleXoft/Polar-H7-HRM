@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -664,11 +664,14 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="myHeart Rate Monitor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="myHeart Rate Monitor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="1KP-tp-lhj"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -686,27 +689,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField identifier="RSSItextField" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1D-k7-3kS">
-                                <rect key="frame" x="20" y="20" width="442" height="14"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <textField identifier="RSSItextField" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="p1D-k7-3kS">
+                                <rect key="frame" x="19" y="21" width="442" height="14"/>
                                 <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="RSSI" id="jM7-QE-jeF">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouC-kT-t93">
-                                <rect key="frame" x="72" y="83" width="338" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ouC-kT-t93">
+                                <rect key="frame" x="72" y="83" width="338" height="162"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="---" placeholderString="Apple" id="KPI-gn-EsE">
                                     <font key="font" size="150" name="TimesNewRomanPSMT"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField identifier="BATTERYText Field" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2G4-yN-IK8" userLabel="BATTERYText Field">
+                                <rect key="frame" x="402" y="253" width="59" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="hbb-OH-okV"/>
+                                </constraints>
+                                <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="BATTERY" id="iA4-ql-TpB">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="p1D-k7-3kS" firstAttribute="top" secondItem="ouC-kT-t93" secondAttribute="bottom" constant="48" id="4xo-tg-KwD"/>
+                            <constraint firstItem="ouC-kT-t93" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="74" id="96h-Zk-t2q"/>
+                            <constraint firstItem="ouC-kT-t93" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="CoZ-0M-zxJ"/>
+                            <constraint firstItem="2G4-yN-IK8" firstAttribute="trailing" secondItem="p1D-k7-3kS" secondAttribute="trailing" id="Xrp-U2-nxQ"/>
+                            <constraint firstItem="p1D-k7-3kS" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="dt1-dH-bCB"/>
+                            <constraint firstItem="p1D-k7-3kS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="21" id="fRI-bq-qNC"/>
+                            <constraint firstAttribute="trailing" secondItem="ouC-kT-t93" secondAttribute="trailing" constant="72" id="gNw-6I-9r0"/>
+                            <constraint firstItem="ouC-kT-t93" firstAttribute="top" secondItem="2G4-yN-IK8" secondAttribute="bottom" constant="3" id="oAJ-sT-sjh"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="BATTERYTextField" destination="iA4-ql-TpB" id="jKg-te-qp0"/>
                         <outlet property="BPMTextFiled" destination="ouC-kT-t93" id="ryv-KR-YMq"/>
                         <outlet property="RSSITextField" destination="p1D-k7-3kS" id="Ibz-l7-Y1W"/>
                     </connections>

@@ -15,6 +15,7 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     
     @IBOutlet weak var BPMTextFiled: NSTextField!
     @IBOutlet weak var RSSITextField: NSTextField!
+    @IBOutlet weak var BATTERYTextField: NSTextField!
     
     var centralManager:CBCentralManager!
     var connectingPeripheral:CBPeripheral!
@@ -447,7 +448,7 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor
         characteristic: CBCharacteristic, error: Error?) {
         
-        if (error) != nil{
+        if ( error != nil ) {
             print("----- error in didUpdateNotificationStateFor: \(String(describing: error?.localizedDescription))")
             print("----- error in didUpdateNotificationStateFor: \(String(describing: error))")
         }
@@ -474,11 +475,11 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         print("------- didUpdateValueForCharacteristic begin \(characteristic.uuid.uuidString)")
     
-        // RSSI
+        // continuous RSSI
         peripheral.readRSSI()
         //RSSITextField.stringValue = "RSSI: \(String(describing: peripheral.rssi ?? 0)) db (-30 dB Amazing, -67 dB Very Good, -70 dB Okay, -80 dB Not Good, -90 dB Unusable)."
         
-        if (error) != nil{
+        if ( error != nil ) {
             
         } else {
         
@@ -492,6 +493,8 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
                 
                 print("UPDATING Battery Level: \(buffer[0])%")
             
+                BATTERYTextField.stringValue = "Batt: \(buffer[0])%"
+                
             case POLARH7_HRM_SENSOR_LOCATION_CHARACTERISTIC_UUID:
                 var buffer = [UInt8](repeating: 0x00, count: characteristic.value!.count)
                 characteristic.value!.copyBytes(to: &buffer, count: buffer.count)
