@@ -111,6 +111,8 @@ class ViewController: NSViewController, CBCentralManagerDelegate, CBPeripheralDe
             print("-- central state is unknown")
         case .unsupported:
             print("-- central state is unsupported")
+        @unknown default:
+            print("Swift 5 migraion: @unknown default: case");
         }
         
         print("-- centralManagerDidUpdateState end")
