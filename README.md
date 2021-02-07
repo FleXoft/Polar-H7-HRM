@@ -1,4 +1,4 @@
-Bluetooth Low Energy BLE mockup on macOS (Swift) with Polar H7 Heart Rate Monitor
+Bluetooth Low Energy BLE mockup on macOS (Swift) with Polar H7 / H10 Heart Rate Monitor
 =================================================================================
 
 I always wanted to get closer to a BLE device, here is my first try in Swift.
@@ -7,7 +7,7 @@ I always wanted to get closer to a BLE device, here is my first try in Swift.
 
 Polar H7 Heart Rate Sensor
 
-Compiled on Xcode Version 8.3.2 (8E2002) + Swift 3.1 and tested on macOS Sierra Version 10.12.4 (16E195)
+Compiled on Xcode Version 12.4 (12D4e) + Swift 5 and tested on macOS Catalina Version 10.15.7 (19H512)
 
 ## Links, refs:
 
