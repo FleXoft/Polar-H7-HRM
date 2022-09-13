@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppleEventsUsageDescription</key>
-	<string>Bluetooth Low Energy BLE mockup on macOS (Swift) with Polar H7 Heart Rate Monitor</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -26,6 +24,8 @@
 	<string>public.app-category.healthcare-fitness</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>Privacy - Bluetooth Always Usage Description</key>
+	<string>Bluetooth Low Energy BLE mockup on macOS (Swift) with Polar H7 Heart Rate Monitor</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2017. FLEISCHMANN György. All rights reserved.</string>
 	<key>NSMainStoryboardFile</key>
